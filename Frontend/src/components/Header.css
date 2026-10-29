@@ -1,0 +1,286 @@
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 225px;
+}
+
+.menu-button {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 8px;
+  color: #475569;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  color: #14233b;
+  background: #f1f5f9;
+}
+
+.header-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.header-brand .brand-name {
+  color: #14233b;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+}
+
+.header-brand .brand-name strong {
+  color: #c18b27;
+  font-weight: 700;
+}
+
+.header-brand .brand-subtitle {
+  color: #8491a4;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.top-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  min-height: 76px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8edf3;
+}
+.header-search {
+  width: min(430px, 55%);
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid #e4e9f0;
+  border-radius: 7px;
+  color: #8491a4;
+  background: #f8fafc;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-search:focus-within {
+  border-color: #91a9cb;
+  box-shadow: 0 0 0 3px #dce8f955;
+}
+
+.header-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #24344b;
+  font-size: 12px;
+}
+
+.header-search input::placeholder {
+  color: #98a4b5;
+}
+
+.header-search kbd {
+  padding: 3px 5px;
+  border: 1px solid #e0e5ed;
+  border-radius: 4px;
+  color: #8b98aa;
+  background: #ffffff;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: 10px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-icon {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 7px;
+  color: #64748b;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.header-icon:hover {
+  color: #243b5a;
+  background: #f1f5f9;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  background: #e65d5d;
+}
+
+.header-divider {
+  width: 1px;
+  height: 32px;
+  background: #e5eaf1;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.profile-button:hover {
+  background: #f8fafc;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #dce5f4;
+  border-radius: 9px;
+  color: #244b80;
+  background: #e8eef9;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #26364b;
+  font-size: 12px;
+}
+
+.profile-text strong {
+  font-weight: 600;
+}
+
+.profile-text small {
+  color: #8b98aa;
+  font-size: 10px;
+}
+
+.profile-button > svg {
+  color: #8491a4;
+}
+
+@media (max-width: 900px) {
+  .top-header {
+    padding: 0 18px;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-header {
+    height: 64px;
+    min-height: 64px;
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+  .header-search {
+    width: auto;
+    flex: 1;
+    padding: 9px;
+  }
+
+  .header-search kbd,
+  .profile-text,
+  .profile-button > svg,
+  .header-divider {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 3px;
+  }
+
+  .profile-button {
+    padding: 3px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .header-left {
+    min-width: auto;
+    gap: 10px;
+  }
+
+  .header-brand .brand-name {
+    font-size: 17px;
+  }
+
+  .header-brand .brand-subtitle {
+    font-size: 8px;
+  }
+
+  .top-header {
+    padding: 0 14px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-brand .brand-subtitle,
+  .profile-text,
+  .profile-button > svg,
+  .header-divider {
+    display: none;
+  }
+
+  .header-brand .brand-name {
+    font-size: 15px;
+  }
+
+  .header-search {
+    flex: 1;
+    width: auto;
+  }
+
+  .header-actions {
+    gap: 4px;
+  }
+}
